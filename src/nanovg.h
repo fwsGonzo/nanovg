@@ -238,9 +238,6 @@ void nvgRestore(NVGcontext* ctx);
 // Resets current render state to default values. Does not affect the render state stack.
 void nvgReset(NVGcontext* ctx);
 
-// Gets the current scissor bounds
-struct NVGscissorBounds nvgCurrentScissor(NVGcontext* ctx);
-
 //
 // Render styles
 //
@@ -679,6 +676,9 @@ struct NVGscissorBounds {
 	float h;
 };
 typedef struct NVGscissorBounds NVGscissorBounds;
+
+// Gets the current scissor bounds
+struct NVGscissorBounds nvgCurrentScissor(NVGcontext* ctx);
 
 struct NVGvertex {
 	float x,y,u,v,s,t;
